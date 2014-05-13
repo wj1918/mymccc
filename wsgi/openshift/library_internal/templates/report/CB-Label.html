@@ -1,0 +1,80 @@
+		<html>
+			<head>
+				<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8"/>
+				<title>CB-Label</title>
+				<style type="text/css">
+		.Style0 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: general; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 400; FONT-SIZE: 8pt; FONT-FAMILY: Times New Roman; FONT-STYLE: normal; TEXT-DECORATION: none; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	
+		.Style1 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: center; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 400; FONT-SIZE: 9pt; FONT-FAMILY: Arial; FONT-STYLE: normal; TEXT-DECORATION: none; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	
+		.Style2 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: center; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 700; FONT-SIZE: 11pt; FONT-FAMILY: Arial; FONT-STYLE: normal; TEXT-DECORATION: none; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	
+		.Style3 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: left; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 400; FONT-SIZE: 9pt; FONT-FAMILY: Arial; FONT-STYLE: normal; TEXT-DECORATION: none; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	
+		.Style4 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: right; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 700; FONT-SIZE: 9pt; FONT-FAMILY: Arial; FONT-STYLE: normal; TEXT-DECORATION: underline; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	
+		.Style5 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: center; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 700; FONT-SIZE: 9pt; FONT-FAMILY: Arial; FONT-STYLE: normal; TEXT-DECORATION: none; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	
+		.Style6 { BORDER-STYLE: none; COLOR: #000000; BACKGROUND-COLOR: #ffffff; BORDER-WIDTH: 1px; BORDER-COLOR: #000000; TEXT-ALIGN: left; WRITING-MODE: lr-tb; VISIBILITY: visible; FONT-WEIGHT: 700; FONT-SIZE: 9pt; FONT-FAMILY: Arial; FONT-STYLE: normal; TEXT-DECORATION: none; PADDING-TOP: 0.in; PADDING-BOTTOM: 0.in; PADDING-RIGHT: 0.in; PADDING-LEFT: 0.in }
+	</style>
+			</head>
+			<body link="#0c0000" vlink="#050000">
+				<!-- Calculate expressions and running sums -->
+				<div style="BORDER-STYLE: none; WIDTH: 7.5194in; BACKGROUND-COLOR: #ffffff; VISIBILITY: visible; HEIGHT: 0.1236in; POSITION: relative">
+					<span class="Style0" style="LEFT: 6.6166in; TOP: 0.0083in; WIDTH: 0.7083in; HEIGHT: 0.1152in; OVERFLOW: hidden; POSITION: absolute">
+					</span>
+				</div>
+				<!--xsl:for-each select="vCB-DBLabel-Use"-->
+			    {% for cbdb in cbdb_list %}
+
+					<!-- Calculate expressions and running sums -->
+					<div style="BORDER-STYLE: none; WIDTH: 7.5194in; BACKGROUND-COLOR: #ffffff; VISIBILITY: visible; HEIGHT: 0.8659in; POSITION: relative">
+						<span class="Style1" style="LEFT: 0.0583in; TOP: 0.in; WIDTH: 0.8555in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+						<span class="Style2" style="LEFT: 0.0729in; TOP: 0.3854in; WIDTH: 0.8555in; HEIGHT: 0.2437in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+						<span class="Style3" style="LEFT: 1.0625in; TOP: 0.3041in; WIDTH: 2.7194in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="Author"/-->
+							{{ cbdb.author }}
+						</span>
+						<span class="Style3" style="LEFT: 1.0625in; TOP: 0.4722in; WIDTH: 2.7194in; HEIGHT: 0.3166in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="Title"/-->
+							{{ cbdb.title }}
+						</span>
+						<span class="Style4" style="LEFT: 2.877in; TOP: 0.in; WIDTH: 0.8965in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="AssessionNumber"/-->
+							{{ cbdb.assessionnumber }}
+						</span>
+						<span class="Style5" style="LEFT: 0.0472in; TOP: 0.6298in; WIDTH: 0.8972in; HEIGHT: 0.1611in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+						<span class="Style2" style="LEFT: 0.0583in; TOP: 0.1569in; WIDTH: 0.8555in; HEIGHT: 0.2125in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="DeweyClassNumber"/-->
+							{{ cbdb.deweyclassnumber }}
+						</span>
+						<span class="Style6" style="LEFT: 1.0625in; TOP: 0.in; WIDTH: 1.0222in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+						<span class="Style6" style="LEFT: 1.0625in; TOP: 0.1569in; WIDTH: 2.7201in; HEIGHT: 0.15in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+						<span class="Style3" style="LEFT: 3.9375in; TOP: 0.4722in; WIDTH: 2.6361in; HEIGHT: 0.3166in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="Title"/-->
+							{{ cbdb.title }}
+						</span>
+						<span class="Style4" style="LEFT: 5.7812in; TOP: 0.in; WIDTH: 0.7923in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="AssessionNumber"/-->
+							{{ cbdb.assessionnumber }}
+						</span>
+						<span class="Style6" style="LEFT: 3.9375in; TOP: 0.in; WIDTH: 1.0326in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+						<span class="Style3" style="LEFT: 3.9416in; TOP: 0.3125in; WIDTH: 2.6361in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+							<!--xsl:value-of select="Author"/-->
+							{{ cbdb.author }}
+						</span>
+						<span class="Style6" style="LEFT: 3.9416in; TOP: 0.1666in; WIDTH: 2.6263in; HEIGHT: 0.1604in; OVERFLOW: hidden; POSITION: absolute">
+						</span>
+					</div>
+				<!--/xsl:for-each-->
+				{% endfor %}
+				<!-- Prepare for any expressions in the report or page footer -->
+				<div style="BORDER-STYLE: none; WIDTH: 7.5194in; BACKGROUND-COLOR: #ffffff; VISIBILITY: visible; HEIGHT: 0.in; POSITION: relative"></div>
+			</body>
+		</html>
