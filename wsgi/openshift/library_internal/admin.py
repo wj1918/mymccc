@@ -6,6 +6,11 @@ class LibCbDbAdmin(admin.ModelAdmin):
 
 admin.site.register(LibCbDb, LibCbDbAdmin)
 
+class LibCbDb_DE_FU_BENGAdmin(admin.ModelAdmin):
+    list_display = LibCbDb_DE_FU_BENG._meta.get_all_field_names()
+
+admin.site.register(LibCbDb_DE_FU_BENG, LibCbDb_DE_FU_BENGAdmin)
+
 class LibCcdDbAdmin(admin.ModelAdmin):
     list_display = LibCcdDb._meta.get_all_field_names()
 
@@ -300,3 +305,28 @@ class LibYearindextable1Admin(admin.ModelAdmin):
     list_display = LibYearindextable1._meta.get_all_field_names()
 
 admin.site.register(LibYearindextable1, LibYearindextable1Admin)
+
+class LibShuJiaBianMuAdmin(admin.ModelAdmin):
+    list_display = LibShuJiaBianMu._meta.get_all_field_names()
+
+admin.site.register(LibShuJiaBianMu, LibShuJiaBianMuAdmin)
+
+class LibShuJiaBianMu1Admin(admin.ModelAdmin):
+    list_display = LibShuJiaBianMu1._meta.get_all_field_names()
+
+admin.site.register(LibShuJiaBianMu1, LibShuJiaBianMu1Admin)
+
+class LibShuJiaBianMuOldAdmin(admin.ModelAdmin):
+    list_display = LibShuJiaBianMuOld._meta.get_all_field_names()
+
+admin.site.register(LibShuJiaBianMuOld, LibShuJiaBianMuOldAdmin)
+
+class LibShuJiaBianMuOld1Admin(admin.ModelAdmin):
+    list_display = LibShuJiaBianMuOld1._meta.get_all_field_names()
+
+admin.site.register(LibShuJiaBianMuOld1, LibShuJiaBianMuOld1Admin)
+
+class LibTieShangCuoWuAdmin(admin.ModelAdmin):
+    list_display = LibTieShangCuoWu._meta.get_all_field_names()
+
+admin.site.register(LibTieShangCuoWu, LibTieShangCuoWuAdmin)

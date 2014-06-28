@@ -1,8 +1,9 @@
+# -*- coding: UTF-8 -*-
 # This is an auto-generated Django model module.
 # You'll have to do the following manually to clean this up:
 #   * Rearrange models' order
 #   * Make sure each model has one field with primary_key=True
-#   * Remove `managed = True` lines if you wish to allow Django to create and delete the table
+#   * Remove `managed = False` lines if you wish to allow Django to create and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 #
 # Also note: You'll have to insert the output of 'django-admin.py sqlcustom [appname]'
@@ -12,6 +13,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 class LibCbDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=160, blank=True) # Field name made lowercase.
@@ -22,10 +24,29 @@ class LibCbDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CB-DB'
 
+#class LibCbDb的複本(models.Model):
+class LibCbDb_DE_FU_BENG(models.Model):
+    def __unicode__(self):
+        return "LibCbDb的複本";
+    id = models.IntegerField(primary_key=True)
+    classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
+    volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
+    author = models.CharField(db_column='Author', max_length=160, blank=True) # Field name made lowercase.
+    title = models.CharField(db_column='Title', max_length=240, blank=True) # Field name made lowercase.
+    autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
+    clutternumber = models.CharField(db_column='ClutterNumber', max_length=12, blank=True) # Field name made lowercase.
+    keeper = models.CharField(db_column='Keeper', max_length=20, blank=True) # Field name made lowercase.
+    keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
+    inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'LIB_CB-DB的複本'
+
 class LibCcdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -39,10 +60,11 @@ class LibCcdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CCD-DB'
 
 class LibCcdDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -56,10 +78,11 @@ class LibCcdDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CCD-DB1'
 
 class LibCdvdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -73,10 +96,11 @@ class LibCdvdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CDVD-DB'
 
 class LibCtDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -90,10 +114,11 @@ class LibCtDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CT-DB'
 
 class LibCtDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -107,10 +132,11 @@ class LibCtDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CT-DB1'
 
 class LibCvDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -125,10 +151,11 @@ class LibCvDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CV-DB'
 
 class LibCvDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -143,10 +170,11 @@ class LibCvDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_CV-DB1'
 
 class LibChoirDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=240, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=160, blank=True) # Field name made lowercase.
@@ -159,10 +187,11 @@ class LibChoirDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_Choir-DB'
 
 class LibChoirDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=240, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=160, blank=True) # Field name made lowercase.
@@ -175,10 +204,11 @@ class LibChoirDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_Choir-DB1'
 
 class LibClassnumberlookuptable(models.Model):
+    id = models.IntegerField(primary_key=True)
     deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=100, blank=True) # Field name made lowercase.
     mcccpre96classnumber = models.CharField(db_column='MCCCPre96ClassNumber', max_length=100, blank=True) # Field name made lowercase.
     afccatalognumber = models.CharField(db_column='AFCcatalogNumber', max_length=100, blank=True) # Field name made lowercase.
@@ -187,10 +217,37 @@ class LibClassnumberlookuptable(models.Model):
     keeperindex1 = models.IntegerField(db_column='KeeperIndex1', blank=True, null=True) # Field name made lowercase.
     keeperindex2 = models.IntegerField(db_column='KeeperIndex2', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_ClassNumberLookUpTable'
 
+#class LibClassnumberlookuptableOldCopyCanBeDeletedLater(models.Model):
+#    id = models.IntegerField(primary_key=True)
+#    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=100, blank=True) # Field name made lowercase.
+#    mcccpre96classnumber = models.CharField(db_column='MCCCPre96ClassNumber', max_length=100, blank=True) # Field name made lowercase.
+#    afccatalognumber = models.CharField(db_column='AFCcatalogNumber', max_length=100, blank=True) # Field name made lowercase.
+#    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=400, blank=True) # Field name made lowercase.
+#    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=100, blank=True) # Field name made lowercase.
+#    keeperindex1 = models.IntegerField(db_column='KeeperIndex1', blank=True, null=True) # Field name made lowercase.
+#    keeperindex2 = models.IntegerField(db_column='KeeperIndex2', blank=True, null=True) # Field name made lowercase.
+#    class Meta:
+#        managed = False
+#        db_table = 'LIB_ClassNumberLookUpTable old copy - can be deleted later'
+
+#class LibClassnumberlookuptable1OldCopyCanBeDeletedLater(models.Model):
+#    id = models.IntegerField(primary_key=True)
+#    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=100, blank=True) # Field name made lowercase.
+#    mcccpre96classnumber = models.CharField(db_column='MCCCPre96ClassNumber', max_length=100, blank=True) # Field name made lowercase.
+#    afccatalognumber = models.CharField(db_column='AFCcatalogNumber', max_length=100, blank=True) # Field name made lowercase.
+#    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=400, blank=True) # Field name made lowercase.
+#    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=100, blank=True) # Field name made lowercase.
+#    keeperindex1 = models.IntegerField(db_column='KeeperIndex1', blank=True, null=True) # Field name made lowercase.
+#    keeperindex2 = models.IntegerField(db_column='KeeperIndex2', blank=True, null=True) # Field name made lowercase.
+#    class Meta:
+#        managed = False
+#        db_table = 'LIB_ClassNumberLookUpTable1 old copy - can be deleted later'
+
 class LibDummyrecordtable(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=8, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -198,10 +255,11 @@ class LibDummyrecordtable(models.Model):
     autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
     keeper = models.CharField(db_column='Keeper', max_length=40, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_DummyRecordTable'
 
 class LibDummyrecordtable1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=8, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -209,10 +267,11 @@ class LibDummyrecordtable1(models.Model):
     autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
     keeper = models.CharField(db_column='Keeper', max_length=40, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_DummyRecordTable1'
 
 class LibEbDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=8, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -223,10 +282,11 @@ class LibEbDb(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     application = models.CharField(db_column='Application', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_EB-DB'
 
 class LibEbDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=8, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -237,10 +297,11 @@ class LibEbDb1(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     application = models.CharField(db_column='Application', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_EB-DB1'
 
 class LibEbDb2(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=8, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -251,10 +312,11 @@ class LibEbDb2(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     application = models.CharField(db_column='Application', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_EB-DB2'
 
 class LibEcdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -268,10 +330,11 @@ class LibEcdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_ECD-DB'
 
 class LibEcdDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -285,10 +348,11 @@ class LibEcdDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_ECD-DB1'
 
 class LibEdvdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -302,10 +366,11 @@ class LibEdvdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_EDVD-DB'
 
 class LibEtDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -319,10 +384,11 @@ class LibEtDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_ET-DB'
 
 class LibEtDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -336,10 +402,11 @@ class LibEtDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_ET-DB1'
 
 class LibEvDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -354,10 +421,11 @@ class LibEvDb(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     application = models.CharField(db_column='Application', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_EV-DB'
 
 class LibEvDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -372,28 +440,31 @@ class LibEvDb1(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     application = models.CharField(db_column='Application', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_EV-DB1'
 
 class LibGeneralPurposeLabel(models.Model):
+    id = models.IntegerField(primary_key=True)
     upperleft = models.CharField(db_column='UpperLeft', max_length=20, blank=True) # Field name made lowercase.
     firstline = models.CharField(db_column='FirstLine', max_length=400, blank=True) # Field name made lowercase.
     secondline = models.CharField(db_column='SecondLine', max_length=200, blank=True) # Field name made lowercase.
     autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_General Purpose Label'
 
 class LibGeneralPurposeLabel1(models.Model):
+    id = models.IntegerField(primary_key=True)
     upperleft = models.CharField(db_column='UpperLeft', max_length=20, blank=True) # Field name made lowercase.
     firstline = models.CharField(db_column='FirstLine', max_length=400, blank=True) # Field name made lowercase.
     secondline = models.CharField(db_column='SecondLine', max_length=200, blank=True) # Field name made lowercase.
     autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_General Purpose Label1'
 
 class LibKcbDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -403,10 +474,11 @@ class LibKcbDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCB-DB'
 
 class LibKcbDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -416,10 +488,11 @@ class LibKcbDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCB-DB1'
 
 class LibKcdvdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -433,10 +506,11 @@ class LibKcdvdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCDVD-DB'
 
 class LibKctDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=160, blank=True) # Field name made lowercase.
@@ -455,10 +529,11 @@ class LibKctDb(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=400, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCT-DB'
 
 class LibKctDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=160, blank=True) # Field name made lowercase.
@@ -477,10 +552,11 @@ class LibKctDb1(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=400, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCT-DB1'
 
 class LibKcvDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=160, blank=True) # Field name made lowercase.
@@ -499,10 +575,11 @@ class LibKcvDb(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=400, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCV-DB'
 
 class LibKcvDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=160, blank=True) # Field name made lowercase.
@@ -521,10 +598,11 @@ class LibKcvDb1(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=400, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KCV-DB1'
 
 class LibKebDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -533,10 +611,11 @@ class LibKebDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KEB-DB'
 
 class LibKebDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -545,10 +624,11 @@ class LibKebDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KEB-DB1'
 
 class LibKecdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -562,10 +642,11 @@ class LibKecdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KECD-DB'
 
 class LibKecdDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -579,10 +660,11 @@ class LibKecdDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KECD-DB1'
 
 class LibKedvdDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -596,10 +678,11 @@ class LibKedvdDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KEDVD-DB'
 
 class LibKevDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=160, blank=True) # Field name made lowercase.
@@ -617,10 +700,11 @@ class LibKevDb(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=400, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KEV-DB'
 
 class LibKevDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=10, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=160, blank=True) # Field name made lowercase.
@@ -638,50 +722,55 @@ class LibKevDb1(models.Model):
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=400, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KEV-DB1'
 
 class LibKeeperindextable(models.Model):
+    id = models.IntegerField(primary_key=True)
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     chinesename = models.CharField(db_column='ChineseName', max_length=100, blank=True) # Field name made lowercase.
     englishname = models.CharField(db_column='EnglishName', max_length=100, blank=True) # Field name made lowercase.
     telephonenumber = models.CharField(db_column='TelephoneNumber', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KeeperIndexTable'
 
 class LibKeeperindextable1(models.Model):
+    id = models.IntegerField(primary_key=True)
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     chinesename = models.CharField(db_column='ChineseName', max_length=100, blank=True) # Field name made lowercase.
     englishname = models.CharField(db_column='EnglishName', max_length=100, blank=True) # Field name made lowercase.
     telephonenumber = models.CharField(db_column='TelephoneNumber', max_length=30, blank=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KeeperIndexTable1'
 
 class LibKeeperpreferencetable(models.Model):
+    id = models.IntegerField(primary_key=True)
     deweycallnumber = models.CharField(db_column='DeweyCallNumber', max_length=100, blank=True) # Field name made lowercase.
     keeperindex1 = models.IntegerField(db_column='KeeperIndex1', blank=True, null=True) # Field name made lowercase.
     keeperindex2 = models.IntegerField(db_column='KeeperIndex2', blank=True, null=True) # Field name made lowercase.
     keeperindex3 = models.IntegerField(db_column='KeeperIndex3', blank=True, null=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KeeperPreferenceTable'
 
 class LibKeeperpreferencetable1(models.Model):
+    id = models.IntegerField(primary_key=True)
     deweycallnumber = models.CharField(db_column='DeweyCallNumber', max_length=100, blank=True) # Field name made lowercase.
     keeperindex1 = models.IntegerField(db_column='KeeperIndex1', blank=True, null=True) # Field name made lowercase.
     keeperindex2 = models.IntegerField(db_column='KeeperIndex2', blank=True, null=True) # Field name made lowercase.
     keeperindex3 = models.IntegerField(db_column='KeeperIndex3', blank=True, null=True) # Field name made lowercase.
     comments = models.CharField(db_column='Comments', max_length=100, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_KeeperPreferenceTable1'
 
 class LibPre96CbDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     pre96assessionnumber = models.CharField(db_column='Pre96AssessionNumber', max_length=100, blank=True) # Field name made lowercase.
     keeper = models.CharField(db_column='Keeper', max_length=20, blank=True) # Field name made lowercase.
     pre96classnumber = models.CharField(db_column='Pre96ClassNumber', max_length=20, blank=True) # Field name made lowercase.
@@ -691,10 +780,11 @@ class LibPre96CbDb(models.Model):
     autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_Pre96CB-DB'
 
 class LibPre96CbDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     pre96assessionnumber = models.CharField(db_column='Pre96AssessionNumber', max_length=100, blank=True) # Field name made lowercase.
     keeper = models.CharField(db_column='Keeper', max_length=20, blank=True) # Field name made lowercase.
     pre96classnumber = models.CharField(db_column='Pre96ClassNumber', max_length=20, blank=True) # Field name made lowercase.
@@ -704,10 +794,11 @@ class LibPre96CbDb1(models.Model):
     autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_Pre96CB-DB1'
 
 class LibPre96EbDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     pre96assessionnumber = models.CharField(db_column='Pre96AssessionNumber', max_length=100, blank=True) # Field name made lowercase.
     pre96classnumber = models.CharField(db_column='Pre96ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=140, blank=True) # Field name made lowercase.
@@ -717,10 +808,11 @@ class LibPre96EbDb(models.Model):
     keeper = models.CharField(db_column='Keeper', max_length=20, blank=True) # Field name made lowercase.
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_Pre96EB-DB'
 
 class LibPre96EbDbOld(models.Model):
+    id = models.IntegerField(primary_key=True)
     pre96assessionnumber = models.CharField(db_column='Pre96AssessionNumber', max_length=100, blank=True) # Field name made lowercase.
     pre96classnumber = models.CharField(db_column='Pre96ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     title = models.CharField(db_column='Title', max_length=140, blank=True) # Field name made lowercase.
@@ -730,24 +822,27 @@ class LibPre96EbDbOld(models.Model):
     keeper = models.CharField(db_column='Keeper', max_length=20, blank=True) # Field name made lowercase.
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_Pre96EB-DB-old'
 
 class LibRomanpinintable(models.Model):
+    id = models.IntegerField(primary_key=True)
     chinesecharacter = models.CharField(db_column='ChineseCharacter', max_length=10, blank=True) # Field name made lowercase.
     clutternumber = models.CharField(db_column='ClutterNumber', max_length=12, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_RomanPinInTable'
 
 class LibRomanpinintable1(models.Model):
+    id = models.IntegerField(primary_key=True)
     chinesecharacter = models.CharField(db_column='ChineseCharacter', max_length=10, blank=True) # Field name made lowercase.
     clutternumber = models.CharField(db_column='ClutterNumber', max_length=12, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_RomanPinInTable1'
 
 class LibVbstapes(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -760,10 +855,11 @@ class LibVbstapes(models.Model):
     keeper = models.CharField(db_column='Keeper', max_length=40, blank=True) # Field name made lowercase.
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_VBSTapes'
 
 class LibVbstapes1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -776,10 +872,11 @@ class LibVbstapes1(models.Model):
     keeper = models.CharField(db_column='Keeper', max_length=40, blank=True) # Field name made lowercase.
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_VBSTapes1'
 
 class LibYcmDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -788,10 +885,11 @@ class LibYcmDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YCM-DB'
 
 class LibYcmDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=100, blank=True) # Field name made lowercase.
@@ -800,10 +898,11 @@ class LibYcmDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YCM-DB1'
 
 class LibYcvDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -817,10 +916,11 @@ class LibYcvDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YCV-DB'
 
 class LibYcvDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -834,10 +934,11 @@ class LibYcvDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YCV-DB1'
 
 class LibYebDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=60, blank=True) # Field name made lowercase.
@@ -846,10 +947,11 @@ class LibYebDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YEB-DB'
 
 class LibYevDb(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -863,10 +965,11 @@ class LibYevDb(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YEV-DB'
 
 class LibYevDb1(models.Model):
+    id = models.IntegerField(primary_key=True)
     classnumber = models.CharField(db_column='ClassNumber', max_length=20, blank=True) # Field name made lowercase.
     volume = models.CharField(db_column='Volume', max_length=6, blank=True) # Field name made lowercase.
     author = models.CharField(db_column='Author', max_length=120, blank=True) # Field name made lowercase.
@@ -880,19 +983,89 @@ class LibYevDb1(models.Model):
     keeperindex = models.IntegerField(db_column='KeeperIndex', blank=True, null=True) # Field name made lowercase.
     inputdate = models.CharField(db_column='InputDate', max_length=30, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YEV-DB1'
 
 class LibYearindextable(models.Model):
+    id = models.IntegerField(primary_key=True)
     yearindex = models.CharField(db_column='YearIndex', max_length=8, blank=True) # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=12, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YearIndexTable'
 
 class LibYearindextable1(models.Model):
+    id = models.IntegerField(primary_key=True)
     yearindex = models.CharField(db_column='YearIndex', max_length=8, blank=True) # Field name made lowercase.
     year = models.CharField(db_column='Year', max_length=12, blank=True) # Field name made lowercase.
     class Meta:
-        managed = True
+        managed = False
         db_table = 'LIB_YearIndexTable1'
+
+#class Lib書架編目(models.Model):
+class LibShuJiaBianMu(models.Model):
+    def __unicode__(self):
+        return "Lib書架編目";
+    id = models.IntegerField(primary_key=True)
+    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=20, blank=True) # Field name made lowercase.
+    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=400, blank=True) # Field name made lowercase.
+    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=200, blank=True) # Field name made lowercase.
+    autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'LIB_書架編目'
+
+#class Lib書架編目1(models.Model):
+class LibShuJiaBianMu1(models.Model):
+    def __unicode__(self):
+        return "Lib書架編目1";
+    id = models.IntegerField(primary_key=True)
+    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=20, blank=True) # Field name made lowercase.
+    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=400, blank=True) # Field name made lowercase.
+    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=200, blank=True) # Field name made lowercase.
+    autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'LIB_書架編目1'
+
+#class Lib書架編目Old(models.Model):
+class LibShuJiaBianMuOld(models.Model):
+    def __unicode__(self):
+        return "Lib書架編目Old";
+    id = models.IntegerField(primary_key=True)
+    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=20, blank=True) # Field name made lowercase.
+    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=400, blank=True) # Field name made lowercase.
+    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=200, blank=True) # Field name made lowercase.
+    autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'LIB_書架編目old'
+
+#class Lib書架編目Old1(models.Model):
+class LibShuJiaBianMuOld1(models.Model):
+    def __unicode__(self):
+        return "Lib書架編目Old1";
+    id = models.IntegerField(primary_key=True)
+    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=20, blank=True) # Field name made lowercase.
+    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=400, blank=True) # Field name made lowercase.
+    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=200, blank=True) # Field name made lowercase.
+    autocounter = models.IntegerField(db_column='AutoCounter', blank=True, null=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'LIB_書架編目old1'
+
+#class Lib貼上錯誤(models.Model):
+class LibTieShangCuoWu(models.Model):
+    def __unicode__(self):
+        return "Lib貼上錯誤";   
+    id = models.IntegerField(primary_key=True)
+    deweyclassnumber = models.CharField(db_column='DeweyClassNumber', max_length=510, blank=True) # Field name made lowercase.
+    mcccpre96classnumber = models.CharField(db_column='MCCCPre96ClassNumber', max_length=510, blank=True) # Field name made lowercase.
+    afccatalognumber = models.CharField(db_column='AFCcatalogNumber', max_length=510, blank=True) # Field name made lowercase.
+    deweyclassnumberdescription = models.CharField(db_column='DeweyClassNumberDescription', max_length=510, blank=True) # Field name made lowercase.
+    deweyclassnumberchinesedescription = models.CharField(db_column='DeweyClassNumberChineseDescription', max_length=510, blank=True) # Field name made lowercase.
+    keeperindex1 = models.IntegerField(db_column='KeeperIndex1', blank=True, null=True) # Field name made lowercase.
+    keeperindex2 = models.IntegerField(db_column='KeeperIndex2', blank=True, null=True) # Field name made lowercase.
+    class Meta:
+        managed = False
+        db_table = 'LIB_貼上錯誤'
