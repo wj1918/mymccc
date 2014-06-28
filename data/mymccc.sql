@@ -78,6 +78,8 @@ DROP TABLE IF EXISTS `LIB_貼上錯誤`;
 
 CREATE TABLE `LIB_CB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (160), 
@@ -91,6 +93,8 @@ CREATE TABLE `LIB_CB-DB`
 
 CREATE TABLE `LIB_EB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (8), 
 	`Author`			varchar (100), 
@@ -104,6 +108,8 @@ CREATE TABLE `LIB_EB-DB`
 
 CREATE TABLE `LIB_CCD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -120,6 +126,8 @@ CREATE TABLE `LIB_CCD-DB`
 
 CREATE TABLE `LIB_Choir-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Title`			varchar (240), 
 	`Author`			varchar (160), 
@@ -135,6 +143,8 @@ CREATE TABLE `LIB_Choir-DB`
 
 CREATE TABLE `LIB_ClassNumberLookUpTable old copy - can be deleted later`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (100), 
 	`MCCCPre96ClassNumber`			varchar (100), 
 	`AFCcatalogNumber`			varchar (100), 
@@ -146,6 +156,8 @@ CREATE TABLE `LIB_ClassNumberLookUpTable old copy - can be deleted later`
 
 CREATE TABLE `LIB_CT-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -162,6 +174,8 @@ CREATE TABLE `LIB_CT-DB`
 
 CREATE TABLE `LIB_CV-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Author`			varchar (120), 
@@ -179,6 +193,8 @@ CREATE TABLE `LIB_CV-DB`
 
 CREATE TABLE `LIB_DummyRecordTable`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (8), 
 	`Author`			varchar (100), 
@@ -189,6 +205,8 @@ CREATE TABLE `LIB_DummyRecordTable`
 
 CREATE TABLE `LIB_EB-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (8), 
 	`Author`			varchar (100), 
@@ -202,6 +220,8 @@ CREATE TABLE `LIB_EB-DB1`
 
 CREATE TABLE `LIB_ECD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -218,6 +238,8 @@ CREATE TABLE `LIB_ECD-DB`
 
 CREATE TABLE `LIB_ET-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -234,6 +256,8 @@ CREATE TABLE `LIB_ET-DB`
 
 CREATE TABLE `LIB_EV-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -251,6 +275,8 @@ CREATE TABLE `LIB_EV-DB`
 
 CREATE TABLE `LIB_General Purpose Label`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`UpperLeft`			varchar (20), 
 	`FirstLine`			varchar (400), 
 	`SecondLine`			varchar (200), 
@@ -259,6 +285,8 @@ CREATE TABLE `LIB_General Purpose Label`
 
 CREATE TABLE `LIB_KCB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -271,6 +299,8 @@ CREATE TABLE `LIB_KCB-DB`
 
 CREATE TABLE `LIB_KCT-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Title`			varchar (160), 
@@ -292,6 +322,8 @@ CREATE TABLE `LIB_KCT-DB`
 
 CREATE TABLE `LIB_KCV-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Title`			varchar (160), 
@@ -313,6 +345,8 @@ CREATE TABLE `LIB_KCV-DB`
 
 CREATE TABLE `LIB_KEB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -324,6 +358,8 @@ CREATE TABLE `LIB_KEB-DB`
 
 CREATE TABLE `LIB_KECD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -340,6 +376,8 @@ CREATE TABLE `LIB_KECD-DB`
 
 CREATE TABLE `LIB_KeeperIndexTable`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`KeeperIndex`			int, 
 	`ChineseName`			varchar (100), 
 	`EnglishName`			varchar (100), 
@@ -349,6 +387,8 @@ CREATE TABLE `LIB_KeeperIndexTable`
 
 CREATE TABLE `LIB_KeeperPreferenceTable`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyCallNumber`			varchar (100), 
 	`KeeperIndex1`			int, 
 	`KeeperIndex2`			int, 
@@ -358,6 +398,8 @@ CREATE TABLE `LIB_KeeperPreferenceTable`
 
 CREATE TABLE `LIB_KEV-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Title`			varchar (160), 
@@ -378,6 +420,8 @@ CREATE TABLE `LIB_KEV-DB`
 
 CREATE TABLE `LIB_Pre96CB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`Pre96AssessionNumber`			varchar (100), 
 	`Keeper`			varchar (20), 
 	`Pre96ClassNumber`			varchar (20), 
@@ -390,6 +434,8 @@ CREATE TABLE `LIB_Pre96CB-DB`
 
 CREATE TABLE `LIB_Pre96EB-DB-old`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`Pre96AssessionNumber`			varchar (100), 
 	`Pre96ClassNumber`			varchar (20), 
 	`Title`			varchar (140), 
@@ -402,12 +448,16 @@ CREATE TABLE `LIB_Pre96EB-DB-old`
 
 CREATE TABLE `LIB_RomanPinInTable`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ChineseCharacter`			varchar (10), 
 	`ClutterNumber`			varchar (12)
 );
 
 CREATE TABLE `LIB_VBSTapes`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -423,6 +473,8 @@ CREATE TABLE `LIB_VBSTapes`
 
 CREATE TABLE `LIB_YCM-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (100), 
@@ -434,6 +486,8 @@ CREATE TABLE `LIB_YCM-DB`
 
 CREATE TABLE `LIB_YCV-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -450,12 +504,16 @@ CREATE TABLE `LIB_YCV-DB`
 
 CREATE TABLE `LIB_YearIndexTable`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`YearIndex`			varchar (8), 
 	`Year`			varchar (12)
 );
 
 CREATE TABLE `LIB_YEB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (60), 
@@ -467,6 +525,8 @@ CREATE TABLE `LIB_YEB-DB`
 
 CREATE TABLE `LIB_YEV-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -483,6 +543,8 @@ CREATE TABLE `LIB_YEV-DB`
 
 CREATE TABLE `LIB_書架編目`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (20), 
 	`DeweyClassNumberDescription`			varchar (400), 
 	`DeweyClassNumberChineseDescription`			varchar (200), 
@@ -491,6 +553,8 @@ CREATE TABLE `LIB_書架編目`
 
 CREATE TABLE `LIB_書架編目old`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (20), 
 	`DeweyClassNumberDescription`			varchar (400), 
 	`DeweyClassNumberChineseDescription`			varchar (200), 
@@ -499,6 +563,8 @@ CREATE TABLE `LIB_書架編目old`
 
 CREATE TABLE `LIB_CCD-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -515,6 +581,8 @@ CREATE TABLE `LIB_CCD-DB1`
 
 CREATE TABLE `LIB_Choir-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Title`			varchar (240), 
 	`Author`			varchar (160), 
@@ -530,6 +598,8 @@ CREATE TABLE `LIB_Choir-DB1`
 
 CREATE TABLE `LIB_ClassNumberLookUpTable1 old copy - can be deleted later`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (100), 
 	`MCCCPre96ClassNumber`			varchar (100), 
 	`AFCcatalogNumber`			varchar (100), 
@@ -541,6 +611,8 @@ CREATE TABLE `LIB_ClassNumberLookUpTable1 old copy - can be deleted later`
 
 CREATE TABLE `LIB_CT-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -557,6 +629,8 @@ CREATE TABLE `LIB_CT-DB1`
 
 CREATE TABLE `LIB_CV-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Author`			varchar (120), 
@@ -574,6 +648,8 @@ CREATE TABLE `LIB_CV-DB1`
 
 CREATE TABLE `LIB_DummyRecordTable1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (8), 
 	`Author`			varchar (100), 
@@ -584,6 +660,8 @@ CREATE TABLE `LIB_DummyRecordTable1`
 
 CREATE TABLE `LIB_EB-DB2`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (8), 
 	`Author`			varchar (100), 
@@ -597,6 +675,8 @@ CREATE TABLE `LIB_EB-DB2`
 
 CREATE TABLE `LIB_ECD-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -613,6 +693,8 @@ CREATE TABLE `LIB_ECD-DB1`
 
 CREATE TABLE `LIB_ET-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -629,6 +711,8 @@ CREATE TABLE `LIB_ET-DB1`
 
 CREATE TABLE `LIB_EV-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -646,6 +730,8 @@ CREATE TABLE `LIB_EV-DB1`
 
 CREATE TABLE `LIB_General Purpose Label1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`UpperLeft`			varchar (20), 
 	`FirstLine`			varchar (400), 
 	`SecondLine`			varchar (200), 
@@ -654,6 +740,8 @@ CREATE TABLE `LIB_General Purpose Label1`
 
 CREATE TABLE `LIB_KCB-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -666,6 +754,8 @@ CREATE TABLE `LIB_KCB-DB1`
 
 CREATE TABLE `LIB_KCT-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Title`			varchar (160), 
@@ -687,6 +777,8 @@ CREATE TABLE `LIB_KCT-DB1`
 
 CREATE TABLE `LIB_KCV-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Title`			varchar (160), 
@@ -708,6 +800,8 @@ CREATE TABLE `LIB_KCV-DB1`
 
 CREATE TABLE `LIB_KEB-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -719,6 +813,8 @@ CREATE TABLE `LIB_KEB-DB1`
 
 CREATE TABLE `LIB_KECD-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -735,6 +831,8 @@ CREATE TABLE `LIB_KECD-DB1`
 
 CREATE TABLE `LIB_KeeperIndexTable1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`KeeperIndex`			int, 
 	`ChineseName`			varchar (100), 
 	`EnglishName`			varchar (100), 
@@ -744,6 +842,8 @@ CREATE TABLE `LIB_KeeperIndexTable1`
 
 CREATE TABLE `LIB_KeeperPreferenceTable1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyCallNumber`			varchar (100), 
 	`KeeperIndex1`			int, 
 	`KeeperIndex2`			int, 
@@ -753,6 +853,8 @@ CREATE TABLE `LIB_KeeperPreferenceTable1`
 
 CREATE TABLE `LIB_KEV-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (10), 
 	`Title`			varchar (160), 
@@ -773,6 +875,8 @@ CREATE TABLE `LIB_KEV-DB1`
 
 CREATE TABLE `LIB_Pre96CB-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`Pre96AssessionNumber`			varchar (100), 
 	`Keeper`			varchar (20), 
 	`Pre96ClassNumber`			varchar (20), 
@@ -785,6 +889,8 @@ CREATE TABLE `LIB_Pre96CB-DB1`
 
 CREATE TABLE `LIB_Pre96EB-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`Pre96AssessionNumber`			varchar (100), 
 	`Pre96ClassNumber`			varchar (20), 
 	`Title`			varchar (140), 
@@ -797,12 +903,16 @@ CREATE TABLE `LIB_Pre96EB-DB`
 
 CREATE TABLE `LIB_RomanPinInTable1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ChineseCharacter`			varchar (10), 
 	`ClutterNumber`			varchar (12)
 );
 
 CREATE TABLE `LIB_VBSTapes1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -818,6 +928,8 @@ CREATE TABLE `LIB_VBSTapes1`
 
 CREATE TABLE `LIB_YCM-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (100), 
@@ -829,6 +941,8 @@ CREATE TABLE `LIB_YCM-DB1`
 
 CREATE TABLE `LIB_YCV-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -845,12 +959,16 @@ CREATE TABLE `LIB_YCV-DB1`
 
 CREATE TABLE `LIB_YearIndexTable1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`YearIndex`			varchar (8), 
 	`Year`			varchar (12)
 );
 
 CREATE TABLE `LIB_YEV-DB1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -867,6 +985,8 @@ CREATE TABLE `LIB_YEV-DB1`
 
 CREATE TABLE `LIB_書架編目1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (20), 
 	`DeweyClassNumberDescription`			varchar (400), 
 	`DeweyClassNumberChineseDescription`			varchar (200), 
@@ -875,6 +995,8 @@ CREATE TABLE `LIB_書架編目1`
 
 CREATE TABLE `LIB_書架編目old1`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (20), 
 	`DeweyClassNumberDescription`			varchar (400), 
 	`DeweyClassNumberChineseDescription`			varchar (200), 
@@ -883,6 +1005,8 @@ CREATE TABLE `LIB_書架編目old1`
 
 CREATE TABLE `LIB_EDVD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -899,6 +1023,8 @@ CREATE TABLE `LIB_EDVD-DB`
 
 CREATE TABLE `LIB_CDVD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -915,6 +1041,8 @@ CREATE TABLE `LIB_CDVD-DB`
 
 CREATE TABLE `LIB_CB-DB的複本`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (160), 
@@ -928,6 +1056,8 @@ CREATE TABLE `LIB_CB-DB的複本`
 
 CREATE TABLE `LIB_KEDVD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -944,6 +1074,8 @@ CREATE TABLE `LIB_KEDVD-DB`
 
 CREATE TABLE `LIB_KCDVD-DB`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`ClassNumber`			varchar (20), 
 	`Volume`			varchar (6), 
 	`Author`			varchar (120), 
@@ -960,6 +1092,8 @@ CREATE TABLE `LIB_KCDVD-DB`
 
 CREATE TABLE `LIB_ClassNumberLookUpTable`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (100), 
 	`MCCCPre96ClassNumber`			varchar (100), 
 	`AFCcatalogNumber`			varchar (100), 
@@ -971,6 +1105,8 @@ CREATE TABLE `LIB_ClassNumberLookUpTable`
 
 CREATE TABLE `LIB_貼上錯誤`
  (
+	`id` int(10) NOT NULL auto_increment,
+ 	 PRIMARY KEY  (`id`), 
 	`DeweyClassNumber`			varchar (510), 
 	`MCCCPre96ClassNumber`			varchar (510), 
 	`AFCcatalogNumber`			varchar (510), 

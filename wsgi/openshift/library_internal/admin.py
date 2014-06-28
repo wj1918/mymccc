@@ -2,14 +2,9 @@ from django.contrib import admin
 
 # Register your models here.
 
-from library_internal.models import CbDb
-from library_internal.models import EbDb
+from django.contrib import admin
+from django.db.models import get_models, get_app
 
-class CbDbAdmin(admin.ModelAdmin):
-    list_display= ('title', 'author','classnumber')
-    list_filter = ['classnumber']
-    search_fields= ['title','author','classnumber']
-
-admin.site.register(CbDb,CbDbAdmin)
-admin.site.register(EbDb)
+for model in get_models(get_app('library_internal')):
+    admin.site.register(model)
 
