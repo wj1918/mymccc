@@ -47,4 +47,5 @@ if ! test -f usr/bin/mdb-schema; then
     ./configure --disable-gmdb2 --disable-scrollkeeper --disable-man --prefix=$OPENSHIFT_DATA_DIR/usr
     make
     make install
+    echo "done."
 fi 
