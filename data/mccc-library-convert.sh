@@ -1,5 +1,9 @@
 #!/bin/bash
-
+# This script execute following task
+# 1. download the mdb file from the server
+# 2. convert to sqlite and mysql 
+# 3. upload new new sqlite file to the server
+#
 PROGNAME=$(basename $0)
 
 error_exit()
