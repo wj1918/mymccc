@@ -1,5 +1,50 @@
-#!/bin/bash
+#!/bin/sh
 # This is a simple script and will be executed on your CI system if 
 # available.  Otherwise it will execute while your application is stopped
 # before the build step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
+
+export PATH=$OPENSHIFT_DATA_DIR/usr/bin:$PATH
+
+cd $OPENSHIFT_DATA_DIR
+if ! test -f usr/bin/mdb-schema; then
+    if [ -r build ] ; then
+	rm -rf build
+    fi
+    mkdir build
+    rm -rf usr
+    # install glib-2.0
+    RPM=glib2-2.26.1-3.el6.x86_64.rpm
+    curl -0 http://mirror.centos.org/centos/6/os/x86_64/Packages/$RPM > $RPM
+    rpm2cpio $RPM | cpio -idmv
+    rm $RPM
+    RPM=glib2-devel-2.26.1-3.el6.x86_64.rpm
+    curl -0 http://mirror.centos.org/centos/6/os/x86_64/Packages/$RPM > $RPM
+    rpm2cpio $RPM | cpio -idmv
+    rm $RPM
+    PCDIR=usr/lib64/pkgconfig
+    cd $PCDIR
+    sed -i 's/\/usr/\/var\/lib\/openshift\/53af73084382ec009f000084\/app-root\/data\/usr\//' *.pc
+    export PKG_CONFIG_PATH=$OPENSHIFT_DATA_DIR/usr/lib64/pkgconfig
+
+    #build libtool
+    cd  $OPENSHIFT_DATA_DIR/build
+    rm  libtool-2.4.2.tar.gz 
+    wget  http://ftpmirror.gnu.org/libtool/libtool-2.4.2.tar.gz 
+    tar xfz libtool-2.4.2.tar.gz 
+    cd libtool-2.4.2 
+    ./configure --prefix=$OPENSHIFT_DATA_DIR/usr
+    make
+    make install
+
+    # build mdbtool
+    cd  $OPENSHIFT_DATA_DIR/build
+    git clone https://github.com/wj1918/mdbtools.git 
+    cd mdbtools
+    export ACLOCAL_PATH=`aclocal --print-ac-dir`:$OPENSHIFT_DATA_DIR/usr/share/aclocal
+    libtoolize
+    autoreconf -i -f
+    ./configure --disable-gmdb2 --disable-scrollkeeper --disable-man --prefix=$OPENSHIFT_DATA_DIR/usr
+    make
+    make install
+fi 

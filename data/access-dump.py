@@ -15,14 +15,8 @@ table_names = subprocess.Popen(["mdb-tables", "-1", DATABASE],
                                stdout=subprocess.PIPE).communicate()[0]
 tables = table_names.splitlines()
 
-for table in tables:
-    if table != '':
-        print "DROP TABLE IF EXISTS `{0}_{1}`;".format(NAMESPACE,table)
-
-sys.stdout.flush()
-
 # Dump the schema for the DB
-subprocess.call(["mdb-schema", "-N", NAMESPACE , DATABASE, "mysql"])
+subprocess.call(["mdb-schema","--drop-table", "-N", NAMESPACE , DATABASE, "mysql"])
 
 print "BEGIN;" # start a transaction, speeds things up when importing
  
