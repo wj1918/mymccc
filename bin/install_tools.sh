@@ -16,7 +16,8 @@ install_glib2()
     rm $RPM
     PCDIR=usr/lib64/pkgconfig
     cd $PCDIR
-    sed -i 's/\/usr/\/var\/lib\/openshift\/53af73084382ec009f000084\/app-root\/data\/usr\//' *.pc
+    newdir=$(echo $RUN_DIR |sed 's/\//\\\//g')usr
+    sed -i "s/\/usr/$newdir/g" *.pc
 }
 
 install_libtool()
