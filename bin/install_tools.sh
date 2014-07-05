@@ -1,8 +1,7 @@
 #!/bin/sh
-# This is a simple script and will be executed on your CI system if 
-# available.  Otherwise it will execute while your application is stopped
-# before the build step.  This script gets executed directly, so it
-# could be python, php, ruby, etc.
+#
+# install required tools 
+#
 
 install_glib2()
 {

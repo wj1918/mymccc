@@ -1,3 +1,2 @@
 #!/bin/bash
-#!/bin/sh
-$OPENSHIFT_REPO_DIR/data/mccc-library-convert.sh
+$OPENSHIFT_REPO_DIR/bin/mccc-library-convert.sh
