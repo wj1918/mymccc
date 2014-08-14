@@ -56,6 +56,7 @@ cleanup()
     rm -rf usr lib64 etc
 }
 
+RUN_DIR=$OPENSHIFT_DATA_DIR
 . $OPENSHIFT_DATA_DIR/server.conf
 
 PATH=$RUN_DIR/usr/bin:$PATH
