@@ -57,7 +57,10 @@ cleanup()
 }
 
 RUN_DIR=$OPENSHIFT_DATA_DIR
-. $OPENSHIFT_DATA_DIR/server.conf
+if [ -f $OPENSHIFT_DATA_DIR/server.conf ]
+  then
+    . $OPENSHIFT_DATA_DIR/server.conf
+fi
 
 PATH=$RUN_DIR/usr/bin:$PATH
 
